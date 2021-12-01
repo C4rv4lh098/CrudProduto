@@ -1,0 +1,34 @@
+.cadastro{
+  margin: auto;
+  width: 900px;
+  background-color: #F4F4F4;
+  border-radius: 30px;
+}
+
+.content{
+  text-align: center;
+}
+
+form{
+  font-size: larger;
+  padding: 20px;
+}
+
+button{
+  margin-top: 15px;
+  font-size: large;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s ease all;
+  border-color: teal;
+}
+
+button:hover{
+  background-color: green;
+  border-color: darkcyan;
+  color: white;
+}
+
+

@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="cadastro">
+  <div class="content">
+    <br><h2>CADASTRO</h2><hr>
+  </div>
+
+  <form class="row g-3">
+    <div class="col-1"></div>
+
+    <div class="col-10">
+      <label class="form-label">Descrição</label>
+      <textarea type="text" class="form-control" id="inputDescricao" rows="3" required></textarea>
+    </div>
+
+    <div class="col-12"></div>
+
+    <div class="col-2"></div>
+
+    <div class="col-md-2">
+      <label class="form-label">Categoria</label>
+      <select id="inputCategoria" class="form-select" required>
+        <option selected>Selecione...</option>
+        <option value="1">Eletrônico</option>
+        <option value="2">Livro</option>
+        <option value="3">Música</option>
+        <option value="4">Telefonia</option>
+        <option value="5">Papelaria</option>
+        <option value="6">Roupa</option>
+      </select>
+    </div>
+
+    <div class="col-4"></div>
+
+    <div class="col-md-2">
+      <label class="form-label">Preço <i class="fas fa-money-bill-wave-alt"></i></label>
+      <input type="text" class="form-control" id="inputPreco" required>
+    </div>
+
+    <div class="col-md-5"></div>
+
+    <div class="col-6">
+      <button type="submit" title="Efetuar o cadastro">Cadastrar</button>
+    </div>
+  </form>
+</div>
+
