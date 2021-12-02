@@ -1,0 +1,74 @@
+.listar{
+  padding: 20px;
+  margin: auto;
+  width: auto;
+  max-width: 1600px;
+  background-color: #F4F4F4;
+  border-radius: 30px;
+}
+
+.content{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opcoes{
+  display: flex;
+  justify-content: space-around;
+}
+
+.backhome{
+  cursor: pointer;
+  margin-right: -78%;
+}
+
+.backhome:hover{
+  color: turquoise;
+}
+
+.filtro{
+  margin-right: -150%;
+}
+
+table{
+  margin-top: 40px;
+}
+
+.funcionalidades{
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+button{
+  width: 90px;
+  cursor: pointer;
+  font-size: large;
+  border-radius: 10px;
+  transition: .3s ease all;
+}
+
+.editar{
+  color:cornflowerblue;
+  border-color: blue;
+}
+
+.editar:hover{
+  background-color:cornflowerblue;
+  border-color: darkblue;
+  color: white;
+}
+
+.deletar{
+  color: red;
+  border-color: maroon;
+}
+
+.deletar:hover{
+  background-color:red;
+  border-color: darkred;
+  color: white;
+}

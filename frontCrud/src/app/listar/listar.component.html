@@ -1,0 +1,83 @@
+<app-header></app-header>
+<div class="listar"><br>
+  <div class="content">
+    <br><h2>LISTA DE PRODUTOS</h2>
+  </div>
+  <div class="opcoes">
+    <select class="filtro" id="inputCategoria" >
+      <option selected>Filtros</option>
+      <option value="1">Eletrônico</option>
+      <option value="2">Livro</option>
+      <option value="3">Música</option>
+      <option value="4">Telefonia</option>
+      <option value="5">Papelaria</option>
+      <option value="6">Roupa</option>
+    </select>
+    <label class="backhome" title="Voltar a Home" routerLink="/home">HOME <i class="fas fa-home"></i></label>
+  </div><hr>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Descrição</th>
+        <th scope="col"></th>
+        <th scope="col">Categoria</th>
+        <th scope="col"></th>
+        <th scope="col">Data da Compra</th>
+        <th scope="col"></th>
+        <th scope="col">Preço</th>
+        <th class="text-center" scope="col">Funcionalidades</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>100% Algodão</td>
+        <td></td>
+        <td>Roupa</td>
+        <td></td>
+        <td>02-12-2021</td>
+        <td></td>
+        <td>50.0</td>
+        <div class="funcionalidades">
+          <button routerLink="/editar{/id}" title="Editar Produto" class="editar">Editar</button>
+          <button title="Deletar Produto" class="deletar">Excluir</button>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Moto Edge20</td>
+        <td></td>
+        <td>Eletronico</td>
+        <td></td>
+        <td>02-12-2021</td>
+        <td></td>
+        <td>3999.0</td>
+        <div class="funcionalidades">
+          <button title="Editar Produto" class="editar">Editar</button>
+          <button title="Deletar Produto" class="deletar">Excluir</button>
+        </div>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Box O Senhor dos Aneis</td>
+        <td></td>
+        <td>Livro</td>
+        <td></td>
+        <td>02-12-2021</td>
+        <td></td>
+        <td>95.60</td>
+        <div class="funcionalidades">
+          <button title="Editar Produto" class="editar">Editar</button>
+          <button title="Deletar Produto" class="deletar">Excluir</button>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+</div>
