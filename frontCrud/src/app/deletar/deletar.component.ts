@@ -1,15 +1,16 @@
+import { Produto } from './../models/produto.model';
+import { DeleteService } from './../services/delete.service';
+import { Router } from '@angular/router';
 import { listService } from './../services/list.service';
 import { Observable, Subject } from 'rxjs';
-import { Router } from '@angular/router';
-import { Produto } from './../models/produto.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'app-listar',
-  templateUrl: './listar.component.html',
-  styleUrls: ['./listar.component.css']
+  selector: 'app-deletar',
+  templateUrl: './deletar.component.html',
+  styleUrls: ['./deletar.component.css']
 })
-export class ListarComponent implements OnInit {
+export class DeletarComponent implements OnInit {
 
   produtos!: Observable<any>;
 
@@ -28,6 +29,7 @@ export class ListarComponent implements OnInit {
 
   constructor(
     private listService: listService,
+    private DeleteService: DeleteService,
     private router:Router) {}
 
     ngOnInit(){
@@ -39,5 +41,15 @@ export class ListarComponent implements OnInit {
     });
   }
 
-  produto: Produto = new Produto();
+  deleteProduto(produto: Produto){
+    console.log(produto)
+    this.DeleteService.deleteProdutoById(produto.id).subscribe((resposta) => {
+      console.log("resposta após ser deletado o item", resposta)
+      const indexDeletedProduto = this._produtos.findIndex((item) => item.id == produto.id)
+      this._produtos.splice(indexDeletedProduto, 1)
+      this.filteredProduto = this._produtos
+      this._filterBy = ""
+    })
+  }
+
 }

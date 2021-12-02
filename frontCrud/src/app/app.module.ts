@@ -1,5 +1,9 @@
+import { listService } from './services/list.service';
+import { HttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +12,11 @@ import { HeaderComponent } from './header/header.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ListarComponent } from './listar/listar.component';
 import { EditarComponent } from './editar/editar.component';
+import { CreateService } from './services/create.service';
+import { UpdateService } from './services/update.service';
+import { DeleteService } from './services/delete.service';
+import { DeletarComponent } from './deletar/deletar.component';
+
 
 @NgModule({
   declarations: [
@@ -16,13 +25,23 @@ import { EditarComponent } from './editar/editar.component';
     HeaderComponent,
     CadastroComponent,
     ListarComponent,
-    EditarComponent
+    EditarComponent,
+    DeletarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    CreateService,
+    listService,
+    UpdateService,
+    DeleteService,
+
+    HttpClient
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

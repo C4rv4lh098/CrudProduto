@@ -33,51 +33,20 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>100% Algodão</td>
+      <tr *ngFor="let produto of filteredProduto" scope="row">
+        <th scope="row">{{produto.id}}</th>
+        <td>{{produto.descricao}}</td>
         <td></td>
-        <td>Roupa</td>
+        <td>{{produto.categoria}}</td>
         <td></td>
-        <td>02-12-2021</td>
+        <td>{{produto.dataCompra}}</td>
         <td></td>
-        <td>50.0</td>
+        <td>{{produto.preco}}</td>
         <div class="funcionalidades">
-          <button routerLink="/editar{/id}" title="Editar Produto" class="editar">Editar</button>
-          <button title="Deletar Produto" class="deletar">Excluir</button>
-        </div>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Moto Edge20</td>
-        <td></td>
-        <td>Eletronico</td>
-        <td></td>
-        <td>02-12-2021</td>
-        <td></td>
-        <td>3999.0</td>
-        <div class="funcionalidades">
-          <button title="Editar Produto" class="editar">Editar</button>
-          <button title="Deletar Produto" class="deletar">Excluir</button>
-        </div>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Box O Senhor dos Aneis</td>
-        <td></td>
-        <td>Livro</td>
-        <td></td>
-        <td>02-12-2021</td>
-        <td></td>
-        <td>95.60</td>
-        <div class="funcionalidades">
-          <button title="Editar Produto" class="editar">Editar</button>
+          <button routerLink="/editar/{{produto.id}}" title="Editar Produto" class="editar">Editar</button>
           <button title="Deletar Produto" class="deletar">Excluir</button>
         </div>
       </tr>
     </tbody>
   </table>
-
-
-
 </div>
