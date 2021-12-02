@@ -53,11 +53,11 @@ public class Produto implements Serializable {
         this.dataCompra = dataCompra;
     }
 
-    public Float getPreço() {
+    public Float getPreco() {
         return preco;
     }
 
-    public void setPreço(Float preço) {
+    public void setPreco(Float preco) {
         this.preco = preco;
     }
 
