@@ -16,6 +16,7 @@ import { CreateService } from './services/create.service';
 import { UpdateService } from './services/update.service';
 import { DeleteService } from './services/delete.service';
 import { DeletarComponent } from './deletar/deletar.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({

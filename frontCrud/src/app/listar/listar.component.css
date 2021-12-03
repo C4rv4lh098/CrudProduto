@@ -21,15 +21,25 @@
 
 .backhome{
   cursor: pointer;
-  margin-right: -78%;
+  margin-right: -60%;
+}
+
+.new{
+  cursor: pointer;
+  margin-right: -120%;
 }
 
 .backhome:hover{
   color: turquoise;
 }
 
+
+.new:hover{
+  color: turquoise;
+}
+
 .filtro{
-  margin-right: -150%;
+  margin-right: -120%;
 }
 
 table{
@@ -54,6 +64,7 @@ button{
 .editar{
   color:cornflowerblue;
   border-color: blue;
+
 }
 
 .editar:hover{

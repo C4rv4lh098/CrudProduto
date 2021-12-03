@@ -23,5 +23,6 @@ export class CadastroComponent implements OnInit {
     this.CreateService.createProduto(this.produto).subscribe(data => console.log(data), error => console.log(error));
     this.produto = new Produto();
     this.router.navigate(['/cadastro']);
+    alert("Produto Cadastrado com sucesso!!!");
   }
 }

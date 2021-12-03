@@ -29,18 +29,20 @@ button{
   transition: .3s ease all;
 }
 
-button.cadastrar{
-  color: green;
+button.editarButton{
+  color: cornflowerblue;
+  border-color: blue;
 }
 
 button.cancelar{
   color: red;
+  border-color: crimson;
 }
 
-.cadastrar:hover{
-  border-color: teal;
-  background-color: green;
-  border-color: darkcyan;
+.editarButton:hover{
+  border-color: blue;
+  background-color:cornflowerblue;
+  border-color: darkblue;
   color: white;
 }
 

@@ -50,6 +50,8 @@ export class DeletarComponent implements OnInit {
       this.filteredProduto = this._produtos
       this._filterBy = ""
     })
+    alert("Produto excluido");
+    this.router.navigate(['/listar'])
   }
 
 }

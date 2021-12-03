@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="deletar"><br>
   <div class="content">
-    <br><h2>DELETAR</h2>
+    <br><h2>Deletar</h2>
     <label class="backhome" routerLink="/home">HOME <i class="fas fa-home"></i></label>
   </div><hr>
 
@@ -11,7 +11,7 @@
 
     <div class="col-10">
       <label class="form-label">Descrição</label>
-      <textarea  type="text" class="form-control" id="inputDescricao" rows="3" required>{{produto.descricao}}</textarea>
+      <textarea  type="text" class="form-control" id="inputDescricao" rows="3" disabled>{{produto.descricao}}</textarea>
     </div>
 
     <div class="col-12"></div>
@@ -20,29 +20,39 @@
 
     <div class="col-md-3">
       <label class="form-label">Categoria</label>
-      <label class="form-label">{{produto.categoria}}</label>
+      <select id="inputCategoria" class="form-select" disabled>
+        <option selected>{{produto.categoria}}</option>
+        <option value="1">Eletrônico</option>
+        <option value="2">Livro</option>
+        <option value="3">Música</option>
+        <option value="4">Telefonia</option>
+        <option value="5">Papelaria</option>
+        <option value="6">Roupa</option>
+      </select>
     </div>
 
     <div class="col-1"></div>
 
     <div class="col-md-3">
-      <label class="form-label">Data da Copra</label>
-      <label class="form-label">{{produto.dataCompra}}</label></div>
+      <label class="form-label">Data da Compra</label>
+      <input placeholder="{{produto.dataCompra}}" type="tex" class="form-control" id="inputData" disabled>
+    </div>
 
     <div class="col-1"></div>
 
     <div class="col-md-2">
       <label class="form-label">Preço <i class="fas fa-money-bill-wave-alt"></i></label>
-      <label class="form-label">{{produto.preco}}</label></div>
+      <input placeholder="{{produto.preco}}" type="number" class="form-control" id="inputPreco" disabled>
+    </div>
 
     <div class="col-12"></div>
 
     <div class="col-3"></div>
 
     <div class="col-8">
-      <button class="cadastrar" type="button" title="Editar Produto" (click)="deleteProduto(produto.id)" >Deletar <i class="far fa-save"></i></button>
-      <button class="cancelar" type="button" routerLink="/listar" title="Cancelar Edição">Cancelar <i class="fas fa-times"></i></button>
-    </div>
+      <button class="deletarProduto" type="button" title="Excluir Produto" (click)="deleteProduto(produto)">Deletar <i class="far fa-trash-alt"></i></button>
+      <button class="cancelar" type="button" routerLink="/listar" title="Cancelar excluão">Cancelar <i class="fas fa-times"></i></button>
+    </div><hr>
   </form>
 </div>
 

@@ -4,6 +4,7 @@
     <br><h2>LISTA DE PRODUTOS</h2>
   </div>
   <div class="opcoes">
+    <label class="new" title="Cadastrar Novo Produto" routerLink="/cadastro">Novo +</label>
     <select class="filtro" id="inputCategoria" >
       <option selected>Filtros</option>
       <option value="1">Eletrônico</option>
@@ -43,8 +44,8 @@
         <td></td>
         <td>{{produto.preco}}</td>
         <div class="funcionalidades">
-          <button routerLink="/editar/{{produto.id}}" title="Editar Produto" class="editar">Editar</button>
-          <button routerLink="/deletar/{{produto.id}}" title="Deletar Produto" class="deletar">Excluir</button>
+          <button routerLink="/editar/{{produto.id}}" title="Editar Produto" class="editar">Editar <i class="far fa-edit"></i></button>
+          <button routerLink="/deletar/{{produto.id}}" title="Deletar Produto" class="deletar">Excluir <i class="far fa-trash-alt"></i></button>
         </div>
       </tr>
     </tbody>

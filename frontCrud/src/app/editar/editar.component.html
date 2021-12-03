@@ -34,8 +34,8 @@
     <div class="col-1"></div>
 
     <div class="col-md-3">
-      <label class="form-label">Data da Copra</label>
-      <input placeholder="{{produto.dataCompra}}" type="date" class="form-control" id="inputData" required>
+      <label class="form-label">Data da Compra</label>
+      <input placeholder="{{produto.dataCompra}}" type="tex" class="form-control" id="inputData" required>
     </div>
 
     <div class="col-1"></div>
@@ -50,7 +50,7 @@
     <div class="col-3"></div>
 
     <div class="col-8">
-      <button class="cadastrar" type="button" title="Editar Produto" (click)="updateProduto(produto.id)" >Editar <i class="far fa-save"></i></button>
+      <button class="editarButton" type="button" title="Editar Produto" (click)="updateProduto(produto.id)" >Editar <i class="far fa-save"></i></button>
       <button class="cancelar" type="button" routerLink="/listar" title="Cancelar Edição">Cancelar <i class="fas fa-times"></i></button>
     </div>
   </form>

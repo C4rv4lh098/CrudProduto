@@ -10,7 +10,7 @@
 
     <div class="col-10">
       <label class="form-label">Descrição</label>
-      <textarea placeholder="Escreva nesta área a descrição do produto que será cadastrado!" type="text" class="form-control" id="inputDescricao" rows="3" required [(ngModel)]="produto.descricao"></textarea>
+      <textarea placeholder="Escreva nesta área a descrição do produto que será cadastrado!" type="text" class="form-control" rows="3" name="descricao" required [(ngModel)]="produto.descricao"></textarea>
     </div>
 
     <div class="col-12"></div>
@@ -19,29 +19,29 @@
 
     <div class="col-md-3">
       <label class="form-label">Categoria</label>
-      <select id="inputCategoria" class="form-select" required [(ngModel)]="produto.categoria">
+      <select class="form-select" required name="categoria" [(ngModel)]="produto.categoria">
         <option selected>Selecione...</option>
-        <option value="1">Eletrônico</option>
-        <option value="2">Livro</option>
-        <option value="3">Música</option>
-        <option value="4">Telefonia</option>
-        <option value="5">Papelaria</option>
-        <option value="6">Roupa</option>
+        <option value="Eletônico">Eletrônico</option>
+        <option value="Livro">Livro</option>
+        <option value="Música">Música</option>
+        <option value="Telefonia">Telefonia</option>
+        <option value="Papelaria">Papelaria</option>
+        <option value="Roupa">Roupa</option>
       </select>
     </div>
 
     <div class="col-1"></div>
 
     <div class="col-md-3">
-      <label class="form-label">Data da Copra</label>
-      <input type="date" class="form-control" id="inputData" required [(ngModel)]="produto.dataCompra">
+      <label class="form-label">Data da Compra</label>
+      <input placeholder="dd/mm/aaaa" type="text" class="form-control" required name="dataCompra" [(ngModel)]="produto.dataCompra">
     </div>
 
     <div class="col-1"></div>
 
     <div class="col-md-2">
       <label class="form-label">Preço <i class="fas fa-money-bill-wave-alt"></i></label>
-      <input placeholder="R$ 00,00" type="number" class="form-control" id="inputPreco" required [(ngModel)]="produto.preco">
+      <input placeholder="R$ 00,00" type="number" class="form-control" name="preco" required [(ngModel)]="produto.preco">
     </div>
 
     <div class="col-12"></div>
@@ -49,8 +49,8 @@
     <div class="col-3"></div>
 
     <div class="col-8">
-      <button class="cadastrar"  type="submit" title="Efetuar o Cadastro" >Cadastrar <i class="far fa-save"></i></button>
-      <button class="cancelar" type="button" routerLink="/home" title="Cancelar o Cadastro">Cancelar <i class="fas fa-times"></i></button>
+      <button class="cadastrar"  type="submit" title="Efetuar o Cadastro">Cadastrar <i class="far fa-save"></i></button>
+      <button class="cancelar" type="button" routerLink="/listar" title="Cancelar o Cadastro">Cancelar <i class="fas fa-times"></i></button>
     </div>
   </form>
 </div>

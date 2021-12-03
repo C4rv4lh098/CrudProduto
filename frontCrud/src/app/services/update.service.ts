@@ -18,11 +18,11 @@ export class UpdateService {
   }
 
 
-  getProdutoById(id: any): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}${id}`);
+  getProdutoById(id: any): Observable<Produto> {
+    return this.http.get<any>(`${this.baseUrl}/${id}`);
   }
 
   updateProduto(id: number, produto: Produto): Observable<any> {
-    return this.http.put<any>(`${this.baseUrl}${id}`, produto);
+    return this.http.put<any>(`${this.baseUrl}/${id}`, produto);
   }
 }
