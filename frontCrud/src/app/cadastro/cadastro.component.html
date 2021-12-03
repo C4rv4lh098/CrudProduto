@@ -5,12 +5,12 @@
     <label class="backhome" routerLink="/home">HOME <i class="fas fa-home"></i></label>
   </div><hr>
 
-  <form class="row g-3">
+  <form #form="ngForm" (ngSubmit)="onSubmit()" class="row g-3">
     <div class="col-1"></div>
 
     <div class="col-10">
       <label class="form-label">Descrição</label>
-      <textarea placeholder="Escreva nesta área a descrição do produto que será cadastrado!" type="text" class="form-control" id="inputDescricao" rows="3" required></textarea>
+      <textarea placeholder="Escreva nesta área a descrição do produto que será cadastrado!" type="text" class="form-control" id="inputDescricao" rows="3" required [(ngModel)]="produto.descricao"></textarea>
     </div>
 
     <div class="col-12"></div>
@@ -19,7 +19,7 @@
 
     <div class="col-md-3">
       <label class="form-label">Categoria</label>
-      <select id="inputCategoria" class="form-select" required>
+      <select id="inputCategoria" class="form-select" required [(ngModel)]="produto.categoria">
         <option selected>Selecione...</option>
         <option value="1">Eletrônico</option>
         <option value="2">Livro</option>
@@ -34,14 +34,14 @@
 
     <div class="col-md-3">
       <label class="form-label">Data da Copra</label>
-      <input type="date" class="form-control" id="inputData" required>
+      <input type="date" class="form-control" id="inputData" required [(ngModel)]="produto.dataCompra">
     </div>
 
     <div class="col-1"></div>
 
     <div class="col-md-2">
       <label class="form-label">Preço <i class="fas fa-money-bill-wave-alt"></i></label>
-      <input placeholder="R$ 00,00" type="number" class="form-control" id="inputPreco" required>
+      <input placeholder="R$ 00,00" type="number" class="form-control" id="inputPreco" required [(ngModel)]="produto.preco">
     </div>
 
     <div class="col-12"></div>
@@ -49,7 +49,7 @@
     <div class="col-3"></div>
 
     <div class="col-8">
-      <button class="cadastrar" type="submit" title="Efetuar o Cadastro" >Cadastrar <i class="far fa-save"></i></button>
+      <button class="cadastrar"  type="submit" title="Efetuar o Cadastro" >Cadastrar <i class="far fa-save"></i></button>
       <button class="cancelar" type="button" routerLink="/home" title="Cancelar o Cadastro">Cancelar <i class="fas fa-times"></i></button>
     </div>
   </form>

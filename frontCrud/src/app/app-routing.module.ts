@@ -1,3 +1,4 @@
+import { DeletarComponent } from './deletar/deletar.component';
 import { EditarComponent } from './editar/editar.component';
 import { ListarComponent } from './listar/listar.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
   {path:'', component:HomeComponent},
   {path:'cadastro', component:CadastroComponent},
   {path:'listar', component:ListarComponent},
-  {path:'editar/:id', component:EditarComponent}
+  {path:'editar/:id', component:EditarComponent},
+  {path: 'deletar/:id', component:DeletarComponent}
 ];
 
 @NgModule({

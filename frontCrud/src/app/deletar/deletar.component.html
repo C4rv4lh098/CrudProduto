@@ -1,1 +1,48 @@
-<p>deletar works!</p>
+<app-header></app-header>
+<div class="deletar"><br>
+  <div class="content">
+    <br><h2>DELETAR</h2>
+    <label class="backhome" routerLink="/home">HOME <i class="fas fa-home"></i></label>
+  </div><hr>
+
+  <form class="row g-3" *ngFor="let produto of filteredProduto">
+    <div class="col-1"></div>
+
+
+    <div class="col-10">
+      <label class="form-label">Descrição</label>
+      <textarea  type="text" class="form-control" id="inputDescricao" rows="3" required>{{produto.descricao}}</textarea>
+    </div>
+
+    <div class="col-12"></div>
+
+    <div class="col-1"></div>
+
+    <div class="col-md-3">
+      <label class="form-label">Categoria</label>
+      <label class="form-label">{{produto.categoria}}</label>
+    </div>
+
+    <div class="col-1"></div>
+
+    <div class="col-md-3">
+      <label class="form-label">Data da Copra</label>
+      <label class="form-label">{{produto.dataCompra}}</label></div>
+
+    <div class="col-1"></div>
+
+    <div class="col-md-2">
+      <label class="form-label">Preço <i class="fas fa-money-bill-wave-alt"></i></label>
+      <label class="form-label">{{produto.preco}}</label></div>
+
+    <div class="col-12"></div>
+
+    <div class="col-3"></div>
+
+    <div class="col-8">
+      <button class="cadastrar" type="button" title="Editar Produto" (click)="deleteProduto(produto.id)" >Deletar <i class="far fa-save"></i></button>
+      <button class="cancelar" type="button" routerLink="/listar" title="Cancelar Edição">Cancelar <i class="fas fa-times"></i></button>
+    </div>
+  </form>
+</div>
+

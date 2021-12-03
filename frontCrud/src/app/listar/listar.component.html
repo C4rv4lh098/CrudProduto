@@ -44,7 +44,7 @@
         <td>{{produto.preco}}</td>
         <div class="funcionalidades">
           <button routerLink="/editar/{{produto.id}}" title="Editar Produto" class="editar">Editar</button>
-          <button title="Deletar Produto" class="deletar">Excluir</button>
+          <button routerLink="/deletar/{{produto.id}}" title="Deletar Produto" class="deletar">Excluir</button>
         </div>
       </tr>
     </tbody>
