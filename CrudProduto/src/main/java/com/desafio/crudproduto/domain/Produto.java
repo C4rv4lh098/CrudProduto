@@ -14,7 +14,7 @@ public class Produto implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String descricao;
-    private Date dataCompra;
+    private String dataCompra;
     private Float preco;
     private String categoria;
 
@@ -22,7 +22,7 @@ public class Produto implements Serializable {
 
     }
 
-    public Produto(String descricao, Date dataCompra, Float preco, String categoria) {
+    public Produto(String descricao, String dataCompra, Float preco, String categoria) {
         this.descricao = descricao;
         this.dataCompra = dataCompra;
         this.preco = preco;
@@ -45,11 +45,11 @@ public class Produto implements Serializable {
         this.descricao = descricao;
     }
 
-    public Date getDataCompra() {
+    public String getDataCompra() {
         return dataCompra;
     }
 
-    public void setDataCompra(Date dataCompra) {
+    public void setDataCompra(String dataCompra) {
         this.dataCompra = dataCompra;
     }
 
