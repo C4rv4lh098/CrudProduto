@@ -12,11 +12,11 @@ desta forma o back-end já estará funcionando, usando a porta 8080;
 BANCO DE DADOS:
 - Após rodar a parte back-end, acessar a url: http://localhost:8080/h2-console/ e por os seguintes dados:
 
-    Saved Settings: Generic H2 (Embedded)
-    Setting Name: Generic H2 (Embedded)
-    Driver Class: org.h2.Driver
-    JDBC URL: jdbc:h2:mem:testdb
-    User Name: sa
-    Password:
+   - Saved Settings: Generic H2 (Embedded)
+   - Setting Name: Generic H2 (Embedded)
+   - Driver Class: org.h2.Driver
+   - JDBC URL: jdbc:h2:mem:testdb
+   - User Name: sa
+   - Password:
 
 - Conseguindo assim visualizar as informações salvas no banco
