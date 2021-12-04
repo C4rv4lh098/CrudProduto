@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div class="listar"><br>
+  <div class="content">
+    <br><h2>LISTA DE PRODUTOS</h2>
+  </div>
+  <div class="opcoes">
+    <label class="new" title="Cadastrar Novo Produto" routerLink="/cadastro">Novo +</label>
+    <select class="filtro" id="inputCategoria" >
+      <option selected>Filtros</option>
+      <option value="1">Eletrônico</option>
+      <option value="2">Livro</option>
+      <option value="3">Música</option>
+      <option value="4">Telefonia</option>
+      <option value="5">Papelaria</option>
+      <option value="6">Roupa</option>
+    </select>
+    <label class="backhome" title="Voltar a Home" routerLink="/home">HOME <i class="fas fa-home"></i></label>
+  </div><hr>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Descrição</th>
+        <th scope="col"></th>
+        <th scope="col">Categoria</th>
+        <th scope="col"></th>
+        <th scope="col">Data da Compra</th>
+        <th scope="col"></th>
+        <th scope="col">Preço</th>
+        <th class="text-center" scope="col">Funcionalidades</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produto of filteredProduto" scope="row">
+        <th scope="row">{{produto.id}}</th>
+        <td>{{produto.descricao}}</td>
+        <td></td>
+        <td>{{produto.categoria}}</td>
+        <td></td>
+        <td>{{produto.dataCompra}}</td>
+        <td></td>
+        <td>{{produto.preco}}</td>
+        <div class="funcionalidades">
+          <button routerLink="/editar/{{produto.id}}" title="Editar Produto" class="editar">Editar <i class="far fa-edit"></i></button>
+          <button routerLink="/deletar/{{produto.id}}" title="Deletar Produto" class="deletar">Excluir <i class="far fa-trash-alt"></i></button>
+        </div>
+      </tr>
+    </tbody>
+  </table>
+</div>

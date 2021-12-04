@@ -1,0 +1,58 @@
+<app-header></app-header>
+<div class="editar"><br>
+  <div class="content">
+    <br><h2>EDIÇÃO</h2>
+    <label class="backhome" routerLink="/home">HOME <i class="fas fa-home"></i></label>
+  </div><hr>
+
+  <form class="row g-3" *ngFor="let produto of filteredProduto">
+    <div class="col-1"></div>
+
+
+    <div class="col-10">
+      <label class="form-label">Descrição</label>
+      <textarea  type="text" class="form-control" id="inputDescricao" rows="3" required>{{produto.descricao}}</textarea>
+    </div>
+
+    <div class="col-12"></div>
+
+    <div class="col-1"></div>
+
+    <div class="col-md-3">
+      <label class="form-label">Categoria</label>
+      <select id="inputCategoria" class="form-select" required>
+        <option selected>{{produto.categoria}}</option>
+        <option value="1">Eletrônico</option>
+        <option value="2">Livro</option>
+        <option value="3">Música</option>
+        <option value="4">Telefonia</option>
+        <option value="5">Papelaria</option>
+        <option value="6">Roupa</option>
+      </select>
+    </div>
+
+    <div class="col-1"></div>
+
+    <div class="col-md-3">
+      <label class="form-label">Data da Compra</label>
+      <input placeholder="{{produto.dataCompra}}" type="tex" class="form-control" id="inputData" required>
+    </div>
+
+    <div class="col-1"></div>
+
+    <div class="col-md-2">
+      <label class="form-label">Preço <i class="fas fa-money-bill-wave-alt"></i></label>
+      <input placeholder="{{produto.preco}}" type="number" class="form-control" id="inputPreco" required>
+    </div>
+
+    <div class="col-12"></div>
+
+    <div class="col-3"></div>
+
+    <div class="col-8">
+      <button class="editarButton" type="button" title="Editar Produto" (click)="updateProduto(produto.id)" >Editar <i class="far fa-save"></i></button>
+      <button class="cancelar" type="button" routerLink="/listar" title="Cancelar Edição">Cancelar <i class="fas fa-times"></i></button>
+    </div>
+  </form>
+</div>
+
