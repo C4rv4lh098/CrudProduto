@@ -1,5 +1,4 @@
 Tecnologias:
-<<<<<<< developer
 -- Angular 12
 -- Bootstrap
 -- Java 11
@@ -21,9 +20,3 @@ BANCO DE DADOS:
    - Password:
 
 - Conseguindo assim visualizar as informações salvas no banco
-=======
-- Java 11
-- SpringBoot
-- Angular 12
-- node 16
->>>>>>> main
