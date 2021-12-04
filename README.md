@@ -1,7 +1,11 @@
 Tecnologias:
--- Angular 12
--- Bootstrap
--- Java 11
+- Angular 12
+- Bootstrap
+- Java 11
+
+PROJETO:
+- CRUD de produtos com uma descrição, data de compra, preço e uma categoria(são postas 5 categorias como exemplo)
+- Sistema com back-end em java e front-end com Angular e h2 para visualização do banco de dados 
 
 PARA RODAR O PROJETO:
 - Acessar a pasta 'CrudProduto' pelo terminal, usar o comando mvn clean install e depois mvn spring-boot:run
